@@ -1,26 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+export function App() {
+  const addTrip = () => {
+    const name = prompt("Name of the trip:");
+  };
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="max-w-[800px] m-auto bg-white px-10 py-10 min-h-screen space-y-2">
+      <h1 className="text-2xl font-bold">My trips</h1>
+      <div>
+        <a onClick={addTrip}>Add a trip</a>
+      </div>
     </div>
   );
 }
-
-export default App;
