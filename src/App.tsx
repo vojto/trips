@@ -28,7 +28,7 @@ export function App() {
   };
 
   return (
-    <div className="max-w-[800px] m-auto bg-white px-10 py-10 min-h-screen space-y-2">
+    <div className="max-w-[800px] m-auto bg-white px-10 pb-10 pt-16 min-h-screen space-y-2">
       <h1 className="text-2xl font-bold">Recent trips</h1>
 
       <div>
