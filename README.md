@@ -1,10 +1,10 @@
 ## Installation
 
-To be done...
+1. Run `npm install` to install all dependencies.
 
 ## Usage
 
-1. Run `yarn run dev` to start the dev server on port 3000.
+1. Run `npm run dev` to start the dev server on port 3000.
 2. Connect your iPhone to your mac.
 3. Run `open ios/App.xcworkspace` and press the play button in Xcode. This should install the app on your iPhone.
 4. Open another app on the background and wait for 5 minutes.

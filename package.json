@@ -19,7 +19,7 @@
     "typescript": "5.3.3"
   },
   "scripts": {
-    "postinstall": "patch-package",
+    "postinstall": "patch-package && next build && cap sync",
     "dev": "next dev",
     "build": "next build"
   }
