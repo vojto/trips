@@ -1,0 +1,13 @@
+diff --git a/node_modules/@firebase/firestore/dist/index.esm2017.js b/node_modules/@firebase/firestore/dist/index.esm2017.js
+index 9898a06..ff62884 100644
+--- a/node_modules/@firebase/firestore/dist/index.esm2017.js
++++ b/node_modules/@firebase/firestore/dist/index.esm2017.js
+@@ -1987,7 +1987,7 @@ class __PRIVATE_SimpleDbTransaction {
+         e.onsuccess = e => {
+             const n = e.target.result;
+             t(n);
+-        }, e.onerror = e => {
++        }, e.onerror = e => { console.error(`[DEBUG] wrapRequest error: ${e.target.error}`);
+             const t = __PRIVATE_checkForAndReportiOSError(e.target.error);
+             n(t);
+         };
