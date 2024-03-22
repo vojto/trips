@@ -2,42 +2,18 @@ import { addDoc, collection, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "./firebase";
 import { singInFirebaseUser } from "./firebase-signin";
-import { onUserSnapshot } from "./user";
 
 import * as Sentry from "@sentry/capacitor";
 import * as SentryNext from "@sentry/nextjs";
 
 let dsn = "https://examplePublicKey@o0.ingest.sentry.io/0";
-Sentry.init(
-  {
-    dsn,
-    // beforeBreadcrumb() {
-    //   return null;
-    // },
-  },
-  SentryNext.init
-);
+Sentry.init({ dsn }, SentryNext.init);
 
 export function App() {
   const [trips, setTrips] = useState<{ destination: string }[]>([]);
 
   useEffect(() => {
     singInFirebaseUser();
-  }, []);
-
-  useEffect(() => {
-    let promise: Promise<VoidFunction> | undefined;
-
-    const id = setTimeout(() => {
-      promise = onUserSnapshot();
-    }, 1000);
-
-    return () => {
-      clearTimeout(id);
-      if (promise) {
-        promise.then((dispose) => dispose());
-      }
-    };
   }, []);
 
   useEffect(() => {
@@ -59,7 +35,7 @@ export function App() {
     const id = setInterval(() => {
       const now = Date.now();
       const seconds = Math.ceil((now - start) / 1000);
-      console.log(`[DEBUG] App uptime: ${seconds} seconds`);
+      console.log(`[DEBUG] App uptime: ${seconds} seconds - base case`);
     }, 10_000);
     return () => {
       clearInterval(id);
