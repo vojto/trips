@@ -1,3 +1,9 @@
+## Loom video
+
+This shows how to reproduce the problem:
+
+https://www.loom.com/share/c4c1c96ed0374f0983b54e93012d8fa0
+
 ## Installation
 
 1. Run `npm install` to install all dependencies.
