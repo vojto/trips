@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+## Installation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Run `npm install` to install all dependencies.
 
-## Available Scripts
+## Usage
 
-In the project directory, you can run:
+1. Run `npm run dev` to start the dev server on port 3000.
+2. Connect your iPhone to your mac.
+3. Run `open ios/App.xcworkspace` and press the play button in Xcode. This should install the app on your iPhone.
+4. Open another app on the background and wait for 5 minutes.
+5. You should see the following output in your Xcode console:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+[DEBUG] App uptime: 11 seconds
+[DEBUG] App uptime: 21 seconds
+[DEBUG] App uptime: 31 seconds
+[DEBUG] App uptime: 41 seconds
+[DEBUG] App uptime: 51 seconds
+[DEBUG] wrapRequest error: UnknownError: Attempt to get a record from database without an in-progress transaction
+[DEBUG] App uptime: 61 seconds
+[DEBUG] wrapRequest error: UnknownError: Attempt to get a record from database without an in-progress transaction
+[DEBUG] App uptime: 72 seconds
+[DEBUG] wrapRequest error: UnknownError: Attempt to get a record from database without an in-progress transaction
+[DEBUG] App uptime: 83 seconds
+[DEBUG] wrapRequest error: UnknownError: Attempt to get a record from database without an in-progress transaction
+[DEBUG] wrapRequest error: UnknownError: Attempt to get a record from database without an in-progress transaction
+[DEBUG] App uptime: 94 seconds
+[DEBUG] wrapRequest error: UnknownError: Attempt to get a record from database without an in-progress transaction
+[2024-03-21T16:32:29.330Z]  @firebase/firestore: Firestore (10.9.0): INTERNAL UNHANDLED ERROR:  Attempt to get a record from database without an in-progress transaction
+[DEBUG] App uptime: 105 seconds
+[DEBUG] App uptime: 116 seconds
+[DEBUG] App uptime: 127 seconds
+[2024-03-21T16:33:12.707Z]  @firebase/firestore: Firestore (10.9.0): FIRESTORE (10.9.0) INTERNAL ASSERTION FAILED: Unexpected state
+```
